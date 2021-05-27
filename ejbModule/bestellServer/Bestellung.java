@@ -33,6 +33,62 @@ public class Bestellung implements BestellungRemote, BestellungLocal, Serializab
     	gerichte = new ArrayList<Gericht>();
     }
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Bestellstatus getBestellstatus() {
+		return bestellstatus;
+	}
+
+	public void setBestellstatus(Bestellstatus bestellstatus) {
+		this.bestellstatus = bestellstatus;
+	}
+
+	public String getZahlungsart() {
+		return zahlungsart;
+	}
+
+	public void setZahlungsart(String zahlungsart) {
+		this.zahlungsart = zahlungsart;
+	}
+
+	public ArrayList<Gericht> getGerichte() {
+		return gerichte;
+	}
+
+	public void setGerichte(ArrayList<Gericht> gerichte) {
+		this.gerichte = gerichte;
+	}
+
+	public Kunde getKunde() {
+		return kunde;
+	}
+
+	public void setKunde(Kunde kunde) {
+		this.kunde = kunde;
+	}
+
+	public boolean isLieferung() {
+		return lieferung;
+	}
+
+	public void setLieferung(boolean lieferung) {
+		this.lieferung = lieferung;
+	}
+
+	public LocalDateTime getBestellzeit() {
+		return bestellzeit;
+	}
+
+	public void setBestellzeit(LocalDateTime bestellzeit) {
+		this.bestellzeit = bestellzeit;
+	}
+
 }
 
 enum Bestellstatus {
