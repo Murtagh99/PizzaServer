@@ -33,6 +33,15 @@ public class Bestellung implements BestellungRemote, BestellungLocal, Serializab
     	gerichte = new ArrayList<Gericht>();
     }
 
+    public void bestellungAbschlieﬂen(String zahlungsart, String name, String vorname, String adresse, String eMail, String telefonnummer, boolean lieferung, LocalDateTime bestellzeit) {
+    	this.bestellstatus = Bestellstatus.WARTEND;
+    	this.zahlungsart = zahlungsart;
+    	this.kunde = new Kunde(name, vorname, adresse, eMail, telefonnummer);
+    	this.lieferung = lieferung;
+    	this.bestellzeit = bestellzeit;
+    	//TODO persist into database
+    }
+    
 	public int getId() {
 		return id;
 	}
