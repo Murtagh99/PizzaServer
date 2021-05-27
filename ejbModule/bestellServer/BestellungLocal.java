@@ -1,0 +1,8 @@
+package bestellServer;
+
+import javax.ejb.Local;
+
+@Local
+public interface BestellungLocal {
+
+}
