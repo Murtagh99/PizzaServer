@@ -1,7 +1,7 @@
 package bestellServer;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import javax.ejb.LocalBean;
@@ -21,10 +21,10 @@ public class Bestellung implements BestellungRemote, BestellungLocal, Serializab
 	private int id;
 	private Bestellstatus bestellstatus;
 	private String zahlungsart;
-	private ArrayList<Object> gerichte;
-	private Object kunde;
+	private ArrayList<Gericht> gerichte;
+	private Kunde kunde;
 	private boolean lieferung;
-	private LocalDate bestellzeit;
+	private LocalDateTime bestellzeit;
 	
     public Bestellung() {
         // TODO Auto-generated constructor stub
