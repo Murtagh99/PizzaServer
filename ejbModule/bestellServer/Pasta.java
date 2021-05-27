@@ -12,4 +12,12 @@ public class Pasta extends Gericht implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
+	public String getNudel() {
+		return nudel;
+	}
+
+	public void setNudel(String nudel) {
+		this.nudel = nudel;
+	}
+	
 }

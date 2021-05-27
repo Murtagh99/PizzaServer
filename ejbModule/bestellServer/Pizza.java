@@ -12,4 +12,12 @@ public class Pizza extends Gericht implements Serializable  {
 		// TODO Auto-generated constructor stub
 	}
 
+	public int getGroesse() {
+		return groesse;
+	}
+
+	public void setGroesse(int groesse) {
+		this.groesse = groesse;
+	}
+
 }
