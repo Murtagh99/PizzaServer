@@ -18,6 +18,44 @@ public class Gericht implements Serializable {
 		this.zutaten = zutaten;
 	}
 	
+	public void zutatEntfernen(String zutat) {
+		zutaten.remove(zutat);
+	}
 	
-	
+	public void zutatHinzufuegen(String zutat) {
+		zutaten.add(zutat);
+		preis += 0.5;
+	}
+
+	public int getNummer() {
+		return nummer;
+	}
+
+	public void setNummer(int nummer) {
+		this.nummer = nummer;
+	}
+
+	public String getBezeichnung() {
+		return bezeichnung;
+	}
+
+	public void setBezeichnung(String bezeichnung) {
+		this.bezeichnung = bezeichnung;
+	}
+
+	public double getPreis() {
+		return preis;
+	}
+
+	public void setPreis(double preis) {
+		this.preis = preis;
+	}
+
+	public ArrayList<String> getZutaten() {
+		return zutaten;
+	}
+
+	public void setZutaten(ArrayList<String> zutaten) {
+		this.zutaten = zutaten;
+	}
 }
