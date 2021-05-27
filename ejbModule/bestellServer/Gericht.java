@@ -58,5 +58,4 @@ public class Gericht implements Serializable {
 	public void setZutaten(ArrayList<String> zutaten) {
 		this.zutaten = zutaten;
 	}
-	
 }
