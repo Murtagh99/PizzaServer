@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
 import javax.persistence.Entity;
@@ -26,8 +27,10 @@ public class Bestellung implements BestellungRemote, BestellungLocal, Serializab
 	private boolean lieferung;
 	private LocalDateTime bestellzeit;
 	
-    public Bestellung() {
-        // TODO Auto-generated constructor stub
+    @PostConstruct
+    public void init() {
+    	bestellstatus = Bestellstatus.AENDERBAR;
+    	gerichte = new ArrayList<Gericht>();
     }
 
 }
